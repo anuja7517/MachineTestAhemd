@@ -1,0 +1,13 @@
+<div class="card mb-4">
+    <div class="card-header">
+        <img [src]="employeeData.userImage" alt="User Image" class="userimage" />
+        <div class="card-body">
+            {{employeeData.employeeName}} is designated as 
+          <span>{{employeeData.designation}}</span>
+        </div>
+    </div>
+
+<div class="card-footer">
+    <button class="button btn btn-outline-info btn-block" [routerLink]="['/post',employeeData.id]">ViewFulldeatils</button>
+</div>
+</div>

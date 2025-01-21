@@ -1,0 +1,125 @@
+
+<div class="button-container float-right">
+    <button class="btn btn-primary mr-4 mt-4" routerLink="edit">Edit</button>
+
+    <button class="btn btn-danger mt-4 "(click)="ondelete()">Delete</button>
+</div>
+
+
+<div class="card mt-4">
+    <div class="card-header text-center">
+      <img
+        *ngIf="postObj.userImage"
+        [src]="postObj.userImage"
+        alt="User Image"
+        class="user-image"
+      />
+      <h4 class="m-0">{{ postObj.employeeName }}</h4>
+      <p>{{ postObj.designation }}</p>
+    </div>
+  
+    <div class="card-body">
+      <table class="details-table">
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>loginName</td>
+            <td [ngClass]="{'missing-data': !postObj.loginName}">
+              {{ postObj.loginName || 'N/A' }}
+            </td>
+          </tr>
+          <tr>
+            <td>Branch</td>
+            <td [ngClass]="{'missing-data': !postObj.branch}">
+              {{ postObj.branch || 'N/A' }}
+            </td>
+          </tr>
+          <tr>
+            <td>Company</td>
+            <td>{{ postObj.company }}</td>
+          </tr>
+          <tr>
+            <td>Date of Joining</td>
+            <td [ngClass]="{'missing-data': !postObj.dateOfJoining}">
+              {{ postObj.dateOfJoining || 'N/A' }}
+            </td>
+          </tr>
+          <tr>
+            <td>Date of Leaving</td>
+            <td [ngClass]="{'missing-data': !postObj.dateOfLeaving}">
+              {{ postObj.dateOfLeaving || 'N/A' }}
+            </td>
+          </tr>
+          <tr>
+            <td>Department</td>
+            <td>{{ postObj.department }}</td>
+          </tr>
+          <tr>
+            <td>Functional Role</td>
+            <td [ngClass]="{'missing-data': !postObj.functionalRole}">
+              {{ postObj.functionalRole || 'N/A' }}
+            </td>
+          </tr>
+          <tr>
+            <td>Location</td>
+            <td [ngClass]="{'missing-data': !postObj.location}">
+              {{ postObj.location || 'N/A' }}
+            </td>
+          </tr>
+          <tr>
+            <td>Mobile Number</td>
+            <td [ngClass]="{'missing-data': !postObj.mobileNumber}">
+              {{ postObj.mobileNumber || 'N/A' }}
+            </td>
+          </tr>
+          <tr>
+            <td>Alternate number</td>
+            <td>{{ postObj.alternatePhone }}</td>
+          </tr>
+          <tr>
+            <td>Manager L1</td>
+            <td [ngClass]="{'missing-data': !postObj.managerL1}">
+              {{ postObj.managerL1 || 'N/A' }}
+            </td>
+          </tr>
+          <tr>
+            <td>Manager L2</td>
+            <td [ngClass]="{'missing-data': !postObj.managerL2}">
+              {{ postObj.managerL2 || 'N/A' }}
+            </td>
+          </tr>
+          <tr>
+            <td>Manager L3</td>
+            <td [ngClass]="{'missing-data': !postObj.managerL3}">
+              {{ postObj.managerL3 || 'N/A' }}
+            </td>
+          </tr>
+         
+          <tr>
+            <td>Region</td>
+            <td>{{ postObj.region }}</td>
+          </tr>
+          <tr>
+            <td>SMTP Password</td>
+            <td>{{ postObj.smtpPassword }}</td>
+          </tr>
+          <tr>
+            <td>Status</td>
+            <td>{{ postObj.status }}</td>
+          </tr>
+          <tr>
+            <td>Type</td>
+            <td [ngClass]="{'missing-data': !postObj.type}">
+              {{ postObj.type || 'N/A' }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

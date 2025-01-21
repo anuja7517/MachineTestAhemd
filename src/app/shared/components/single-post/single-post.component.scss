@@ -1,0 +1,58 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    padding: 16px;
+}
+
+.card-header h4 {
+    margin: 0;
+}
+
+.user-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.details-table th,
+.details-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.details-table th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+}
+
+.missing-data {
+    color: red;
+    font-weight: bold;
+}
+
+
+.details-table td:first-child {
+    color: black;
+    /* Color for the keys (left side) */
+    font-weight: bolder;
+    /* Bold text for keys */
+    text-align: left;
+    /* Align text to the left */
+    font-size: 15px;
+}

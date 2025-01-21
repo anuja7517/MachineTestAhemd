@@ -1,0 +1,191 @@
+
+<h2>{{!isEditMode ? 'AddPost': ' Update'}}</h2>
+
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <h3>Employee & Account Details</h3>
+    <div class="form-container">
+        <!-- Employee Details -->
+        <div class="form-section">
+            <h4>Employee Details</h4>
+            <div class="form-field">
+                <label>Employee Name:</label>
+                <input formControlName="employeeName" />
+                <div *ngIf="userForm.get('employeeName')?.errors?.['required'] && userForm.get('employeeName')?.touched"
+                    class="error">
+                    Employee Name is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Email:</label>
+                <input formControlName="email" type="email" />
+                <div *ngIf="userForm.get('email')?.errors?.['required'] && userForm.get('email')?.touched"
+                    class="error">
+                    Email is required.
+                </div>
+                <div *ngIf="userForm.get('email')?.errors?.['email'] && userForm.get('email')?.touched" class="error">
+                    Enter a valid email.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Mobile Number:</label>
+                <input formControlName="mobileNumber" type="text" />
+                <div *ngIf="userForm.get('mobileNumber')?.errors?.['required'] && userForm.get('mobileNumber')?.touched"
+                    class="error">
+                    Mobile Number is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Alternate Phone:</label>
+                <input formControlName="alternatePhone" />
+                <div *ngIf="userForm.get('alternatePhone')?.errors?.['required'] && userForm.get('alternatePhone')?.touched"
+                    class="error">
+                    Alternate Phone is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Designation:</label>
+                <input formControlName="designation" />
+                <div *ngIf="userForm.get('designation')?.errors?.['required'] && userForm.get('designation')?.touched"
+                    class="error">
+                    Designation is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Manager L1:</label>
+                <input formControlName="managerL1" />
+                <div *ngIf="userForm.get('managerL1')?.errors?.['required'] && userForm.get('managerL1')?.touched"
+                    class="error">
+                    Manager L1 is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Manager L2:</label>
+                <input formControlName="managerL2" />
+                <div *ngIf="userForm.get('managerL2')?.errors?.['required'] && userForm.get('managerL2')?.touched"
+                    class="error">
+                    Manager L2 is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Manager L3:</label>
+                <input formControlName="managerL3" />
+                <div *ngIf="userForm.get('managerL3')?.errors?.['required'] && userForm.get('managerL3')?.touched"
+                    class="error">
+                    Manager L3 is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Status:</label>
+                <select formControlName="status">
+                    <option value="">Select</option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+                <div *ngIf="userForm.get('status')?.errors?.['required'] && userForm.get('status')?.touched"
+                    class="error">
+                    Status is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Date of Joining:</label>
+                <input formControlName="dateOfJoining" type="date" />
+                <div *ngIf="userForm.get('dateOfJoining')?.errors?.['required'] && userForm.get('dateOfJoining')?.touched"
+                    class="error">
+                    Date of Joining is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Date of Leaving:</label>
+                <input formControlName="dateOfLeaving" type="date" />
+            </div>
+        </div>
+
+        <!-- Account Details -->
+        <div class="form-section">
+            <h4>Account Details</h4>
+            <div class="form-field">
+                <label>Login Name:</label>
+                <input formControlName="loginName" />
+                <div *ngIf="userForm.get('loginName')?.errors?.['required'] && userForm.get('loginName')?.touched"
+                    class="error">
+                    Login Name is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>SMTP Password:</label>
+                <input formControlName="smtpPassword" type="password" />
+                <div *ngIf="userForm.get('smtpPassword')?.errors?.['required'] && userForm.get('smtpPassword')?.touched"
+                    class="error">
+                    SMTP Password is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Functional Role:</label>
+                <input formControlName="functionalRole" />
+                <div *ngIf="userForm.get('functionalRole')?.errors?.['required'] && userForm.get('functionalRole')?.touched"
+                    class="error">
+                    Functional Role is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Company:</label>
+                <input formControlName="company" />
+                <div *ngIf="userForm.get('company')?.errors?.['required'] && userForm.get('company')?.touched"
+                    class="error">
+                    Company is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Department:</label>
+                <input formControlName="department" />
+                <div *ngIf="userForm.get('department')?.errors?.['required'] && userForm.get('department')?.touched"
+                    class="error">
+                    Department is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Region:</label>
+                <input formControlName="region" />
+                <div *ngIf="userForm.get('region')?.errors?.['required'] && userForm.get('region')?.touched"
+                    class="error">
+                    Region is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Branch:</label>
+                <input formControlName="branch" />
+                <div *ngIf="userForm.get('branch')?.errors?.['required'] && userForm.get('branch')?.touched"
+                    class="error">
+                    Branch is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Type:</label>
+                <input formControlName="type" />
+                <div *ngIf="userForm.get('type')?.errors?.['required'] && userForm.get('type')?.touched" class="error">
+                    Type is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Location:</label>
+                <input formControlName="location" />
+                <div *ngIf="userForm.get('location')?.errors?.['required'] && userForm.get('location')?.touched"
+                    class="error">
+                    Location is required.
+                </div>
+            </div>
+            <div class="form-field">
+                <label>User Image:</label>
+                <input formControlName="userImage" type="url" />
+                <div *ngIf="userForm.get('userImage')?.errors?.['required'] && userForm.get('userImage')?.touched"
+                    class="error">
+                    User Image URL is required.
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" *ngIf="!isEditMode"  type="submit">AddPost</button>
+    <button class="btn btn-primary"  *ngIf="isEditMode" (click)="onupdtae()"
+        type="button">UpdatePost</button>
+</form>

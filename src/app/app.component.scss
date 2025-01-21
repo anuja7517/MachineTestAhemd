@@ -1,0 +1,10 @@
+.toolbar-spacer {
+    flex: 1; /* Pushes the 'AddPOST' button to the right */
+  }
+  
+  button {
+    margin-left: auto; /* Ensure it stays on the right side */
+    border-radius: 4px;
+    padding: 6px 12px;
+  }
+  
