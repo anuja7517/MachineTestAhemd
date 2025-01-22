@@ -3,16 +3,20 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Center the card */
+    max-width: 90%; /* Restrict the card width */
 }
 
 .card-header {
     background-color: #007bff;
     color: white;
     padding: 16px;
+    text-align: center; /* Center align the header */
 }
 
 .card-header h4 {
     margin: 0;
+    font-size: 1.2rem; /* Default font size */
 }
 
 .user-image {
@@ -20,13 +24,16 @@
     width: 100px;
     height: 100px;
     object-fit: cover;
-    margin-bottom: 16px;
+    margin: 16px auto;
+    display: block;
+    /* Center the image */
 }
 
 .details-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 16px;
+    font-size: 1rem; /* Default font size */
 }
 
 .details-table th,
@@ -46,13 +53,61 @@
     font-weight: bold;
 }
 
-
 .details-table td:first-child {
     color: black;
-    /* Color for the keys (left side) */
     font-weight: bolder;
-    /* Bold text for keys */
     text-align: left;
-    /* Align text to the left */
     font-size: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        max-width: 95%; /* Adjust width for tablets */
+    }
+
+    .card-header h4 {
+        font-size: 1rem; /* Reduce header font size for smaller screens */
+    }
+
+    .user-image {
+        width: 80px;
+        height: 80px; /* Resize image for smaller screens */
+    }
+
+    .details-table {
+        font-size: 0.9rem; /* Reduce table font size */
+    }
+
+    .details-table td:first-child {
+        font-size: 14px; /* Adjust font size for keys */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        max-width: 100%; /* Full-width for small mobile screens */
+        margin: 10px; /* Add some margin */
+    }
+
+    .card-header h4 {
+        font-size: 0.9rem; /* Further reduce header font size for mobile */
+    }
+
+    .user-image {
+        width: 70px;
+        height: 70px; /* Resize image for small mobile screens */
+    }
+
+    .details-table {
+        font-size: 0.8rem; /* Smaller font size for the table */
+    }
+
+    .details-table td:first-child {
+        font-size: 13px; /* Further reduce font size for keys */
+    }
+
+    .details-table th, .details-table td {
+        padding: 8px; /* Reduce padding for smaller screens */
+    }
 }
