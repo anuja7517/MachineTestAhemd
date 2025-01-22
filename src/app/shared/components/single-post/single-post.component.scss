@@ -3,7 +3,7 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto; /* Center the card */
+    margin: 20px auto;
     max-width: 90%; /* Restrict the card width */
 }
 
@@ -11,12 +11,12 @@
     background-color: #007bff;
     color: white;
     padding: 16px;
-    text-align: center; /* Center align the header */
+    text-align: center;
 }
 
 .card-header h4 {
     margin: 0;
-    font-size: 1.2rem; /* Default font size */
+    font-size: 1.2rem;
 }
 
 .user-image {
@@ -26,14 +26,13 @@
     object-fit: cover;
     margin: 16px auto;
     display: block;
-    /* Center the image */
 }
 
 .details-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 16px;
-    font-size: 1rem; /* Default font size */
+    font-size: 1rem;
 }
 
 .details-table th,
@@ -60,54 +59,67 @@
     font-size: 15px;
 }
 
-/* Responsive Design */
+/* Responsive Design for Tablets */
 @media (max-width: 768px) {
     .card {
-        max-width: 95%; /* Adjust width for tablets */
+        max-width: 95%;
     }
 
     .card-header h4 {
-        font-size: 1rem; /* Reduce header font size for smaller screens */
+        font-size: 1rem;
     }
 
     .user-image {
         width: 80px;
-        height: 80px; /* Resize image for smaller screens */
+        height: 80px;
     }
 
     .details-table {
-        font-size: 0.9rem; /* Reduce table font size */
+        font-size: 0.9rem;
     }
 
     .details-table td:first-child {
-        font-size: 14px; /* Adjust font size for keys */
+        font-size: 14px;
     }
 }
 
+/* Enhanced Responsive Design for Mobile Screens */
 @media (max-width: 480px) {
     .card {
-        max-width: 100%; /* Full-width for small mobile screens */
-        margin: 10px; /* Add some margin */
+        max-width: 100%; /* Full-width for mobile */
+        margin: 10px;
+        border-radius: 5px; /* Reduce border radius for smaller screens */
+    }
+
+    .card-header {
+        padding: 12px;
     }
 
     .card-header h4 {
-        font-size: 0.9rem; /* Further reduce header font size for mobile */
+        font-size: 0.9rem; /* Smaller font size for header */
     }
 
     .user-image {
         width: 70px;
-        height: 70px; /* Resize image for small mobile screens */
+        height: 70px;
+        margin-top: 8px; /* Reduce top margin */
     }
 
     .details-table {
-        font-size: 0.8rem; /* Smaller font size for the table */
+        font-size: 0.8rem; /* Smaller font size for table */
     }
 
     .details-table td:first-child {
-        font-size: 13px; /* Further reduce font size for keys */
+        font-size: 13px;
     }
 
-    .details-table th, .details-table td {
-        padding: 8px; /* Reduce padding for smaller screens */
+    .details-table th,
+    .details-table td {
+        padding: 8px; /* Reduce padding for compact view */
+    }
+
+    .details-table {
+        display: block; /* Enable block layout for better readability */
+        overflow-x: auto; /* Add horizontal scroll for wide tables */
     }
 }
